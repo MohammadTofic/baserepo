@@ -1,5 +1,6 @@
 from flask import Flask ,render_template
 import numpy as np
+import random
 import cv2
 from flask import request as rq
 from werkzeug import secure_filename
@@ -36,7 +37,7 @@ def upload_file():
       #cv2.waitKey(0)
       #cv2.destroyAllWindows()
 
-      return render_template('out.html')
+      return render_template('out.html',dummy=random.randint(1,100000))
 
 
 
